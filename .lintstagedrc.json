@@ -1,0 +1,4 @@
+{
+  "*.{js,jsx,ts,tsx,vue}": ["prettier --ignore-unknown --write", "eslint . --fix --format=stylish"],
+  "*.md": ["prettier --write"]
+}

@@ -1,0 +1,7 @@
+dist
+docs
+.commitlintrc.js
+.release-it.js
+.cz-config.js
+!.eslintrc.js
+!.prettierrc.js

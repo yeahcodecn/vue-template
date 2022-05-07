@@ -1,0 +1,5 @@
+dist
+docs
+# Ignore artifacts:
+.commitlintrc.js
+.release-it.js
