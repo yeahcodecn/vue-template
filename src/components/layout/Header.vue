@@ -117,7 +117,7 @@ function isDarkHandler() {
         <div class="absolute right-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-xl z-10" :class="!dropdownOpen ? 'hidden' : 'block'">
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white dark:bg-slate-200 dark:hover:bg-indigo-600">Profile</a>
           <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white dark:bg-slate-200 dark:hover:bg-indigo-600">Products</a>
-          <a href="/login" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white dark:bg-slate-200 dark:hover:bg-indigo-600">Logout</a>
+          <a @click="$router.push('/login')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white dark:bg-slate-200 dark:hover:bg-indigo-600">Logout</a>
         </div>
       </div>
       <!-- 头像下拉 结束 -->

@@ -20,7 +20,8 @@ export default defineConfig({
     },
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
-  base: './',
+  // base: '/vue-template/',
+  base: '/vue-template/',
   css: {
     preprocessorOptions: {}
   },
