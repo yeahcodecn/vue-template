@@ -1,3 +1,9 @@
+### [0.1.1](https://github.com/yeahcodecn/vue-template/compare/0.1.0...0.1.1) (2022-05-11)
+
+### 👷‍build: 构建流程、外部依赖变更（如升级 npm 包、修改 webpack 配置等）
+
+- **components:** 添加路由前缀，修改样式 ([d4f8269](https://github.com/yeahcodecn/vue-template/commit/d4f82697576dc009ffcacd99427ac0aa3e9d8838))
+
 ## 0.1.0 (2022-05-11)
 
 ### 👷‍build: 构建流程、外部依赖变更（如升级 npm 包、修改 webpack 配置等）
