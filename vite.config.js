@@ -2,18 +2,28 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import viteCompression from 'vite-plugin-compression'
 import { resolve } from 'path'
+import legacy from '@vitejs/plugin-legacy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), viteCompression()],
+  plugins: [
+    vue(),
+    viteCompression(),
+    legacy({
+      targets: ['defaults', 'not IE 11']
+    })
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
       '~': resolve(__dirname, './node_modules')
     },
-    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
   base: './',
+  css: {
+    preprocessorOptions: {}
+  },
   build: {
     rollupOptions: {
       input: {
@@ -28,6 +38,12 @@ export default defineConfig({
     assetsDir: 'assets',
     assetsInlineLimit: 4096,
     cssCodeSplit: true,
-    minify: 'terser'
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    }
   }
 })

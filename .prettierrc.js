@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 120,
+  printWidth: 300,
   // 不使用缩进符，而使用空格
   useTabs: false,
   // tab 用两个空格代替

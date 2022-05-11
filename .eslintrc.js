@@ -15,6 +15,8 @@ module.exports = {
   },
   plugins: ['vue'],
   rules: {
+    'vue/multi-word-component-names': 'off',
+    'vue/html-comment-indent': ['error', 2],
     'vue/script-setup-uses-vars': 'error',
     // 2 个空格缩进：
     indent: ['error', 2],
