@@ -1,3 +1,9 @@
+## [0.2.0](https://github.com/yeahcodecn/vue-template/compare/0.1.1...0.2.0) (2022-05-12)
+
+### ✨feat: 新增功能
+
+- **components:** 添加 color-picker,并规范文件 ([36c6329](https://github.com/yeahcodecn/vue-template/commit/36c6329d34a7bc067e11934c1dd731c2ab586c81))
+
 ### [0.1.1](https://github.com/yeahcodecn/vue-template/compare/0.1.0...0.1.1) (2022-05-11)
 
 ### 👷‍build: 构建流程、外部依赖变更（如升级 npm 包、修改 webpack 配置等）
