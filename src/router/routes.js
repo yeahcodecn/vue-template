@@ -2,40 +2,40 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/components/Home'),
+    component: () => import('@/views/Home'),
     redirect: '/dashboard',
     children: [
       {
         path: '/dashboard',
         name: 'dashboard',
-        component: () => import('@/components/Dashboard')
+        component: () => import('@/views/Dashboard')
       },
       {
         path: '/hello',
         name: 'hello',
-        component: () => import('@/components/HelloWorld')
+        component: () => import('@/views/HelloWorld')
       },
       {
         path: '/tables',
         name: 'tables',
-        component: () => import('@/components/Tables')
+        component: () => import('@/views/Tables')
       },
       {
         path: '/forms',
         name: 'forms',
-        component: () => import('@/components/Login')
+        component: () => import('@/views/Login')
       }
     ]
   },
   {
     path: '/login',
     name: 'login',
-    component: () => import('@/components/Login')
+    component: () => import('@/views/Login')
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import('@/components/Login')
+    component: () => import('@/views/Login')
   }
 ]
 export default routes

@@ -1,17 +1,15 @@
 <script setup>
-import { reactive, ref, watch } from 'vue'
-import Footer from './layout/Footer'
-import Header from './layout/Header'
+import { ref, watch } from 'vue'
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
 let sidebarOpen = ref(false)
 watch(sidebarOpen, (val) => {
   sidebarOpen.value = val
   return sidebarOpen
 })
-let parentData = reactive({
-  isDark: ref(false)
-})
+let isDark = ref(false)
 function change(data) {
-  parentData.isDark = data
+  isDark.value = data
 }
 </script>
 <template>
@@ -19,7 +17,7 @@ function change(data) {
     https://tailwind-elements.com/docs/standard/navigation/sidenav/#! 
     https://tailwindcomponents.com/component/responsive-navbar-with-dropdown
   -->
-  <div class="flex h-screen bg-gray-200" :class="parentData.isDark ? 'theme-dark' : 'theme-light'">
+  <div class="flex h-screen bg-gray-200" :class="isDark ? 'theme-dark' : 'theme-light'">
     <!-- footer 开始-->
     <Footer></Footer>
     <!-- footer 结束-->
@@ -48,7 +46,7 @@ function change(data) {
       </div>
 
       <nav class="mt-10">
-        <a @click="$router.push('/dashboard')" class="flex items-center mt-0 py-2 px-6 text-gray-800 dark:text-white dark:hover:bg-orange-100 dark:hover:bg-opacity-25 hover:bg-opacity-25 hover:text-gray-100">
+        <a @click="$router.push('/dashboard')" class="flex items-center mt-0 py-2 px-6 text-gray-600 dark:text-white dark:hover:bg-orange-100 dark:hover:bg-opacity-25 hover:bg-opacity-25 hover:bg-blue-500 hover:text-gray-900">
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
@@ -56,7 +54,7 @@ function change(data) {
 
           <span class="mx-3">Dashboard</span>
         </a>
-        <a @click="$router.push('/hello')" class="flex items-center mt-0 py-2 px-6 text-gray-800 dark:text-white dark:hover:bg-orange-100 dark:hover:bg-opacity-25 hover:bg-opacity-25 hover:text-gray-100">
+        <a @click="$router.push('/hello')" class="flex items-center mt-0 py-2 px-6 text-gray-600 dark:text-white dark:hover:bg-orange-100 dark:hover:bg-opacity-25 hover:bg-opacity-25 hover:bg-blue-500 hover:text-gray-900">
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path
               stroke-linecap="round"
@@ -68,14 +66,14 @@ function change(data) {
           <span class="mx-3">UI Elements</span>
         </a>
 
-        <a @click="$router.push('/tables')" class="flex items-center mt-0 py-2 px-6 text-gray-800 dark:text-white dark:hover:bg-orange-100 dark:hover:bg-opacity-25 hover:bg-opacity-25 hover:text-gray-100">
+        <a @click="$router.push('/tables')" class="flex items-center mt-0 py-2 px-6 text-gray-600 dark:text-white dark:hover:bg-orange-100 dark:hover:bg-opacity-25 hover:bg-opacity-25 hover:bg-blue-500 hover:text-gray-900">
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
           </svg>
 
           <span class="mx-3">Tables</span>
         </a>
-        <a @click="$router.push('/forms')" class="flex items-center mt-0 py-2 px-6 text-gray-800 dark:text-white dark:hover:bg-orange-100 dark:hover:bg-opacity-25 hover:bg-opacity-25 hover:text-gray-100">
+        <a @click="$router.push('/forms')" class="flex items-center mt-0 py-2 px-6 text-gray-600 dark:text-white dark:hover:bg-orange-100 dark:hover:bg-opacity-25 hover:bg-opacity-25 hover:bg-blue-500 hover:text-gray-900">
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
           </svg>
